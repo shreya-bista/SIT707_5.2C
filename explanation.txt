@@ -1,0 +1,9 @@
+Mocking the Clock: In the given code snippet, a fixed instant fixedInstant is created to represent a specific point in time (2024-05-06T12:00:00Z). Then, a fixed clock fixedClock is created using Clock.fixed() with the fixed instant and the system default time zone. This fixed clock will always return the fixed instant regardless of the system time.
+Why We Need to Mock the Clock for Unit Tests:
+Unit tests aim to verify the behavior of individual components in isolation from external dependencies.
+When writing tests for code that involves time-related operations, relying on the system clock introduces non-determinism and makes tests unreliable.
+By mocking the clock, we can control the behavior of time in our tests, ensuring that they are deterministic and consistent.
+Mocking the clock allows us to test time-dependent functionality such as scheduled tasks, timeouts, or expiration logic without waiting for actual time to pass.
+It also enables us to test edge cases and boundary conditions that would be difficult or impossible to reproduce with real-time values.
+Conclusion:
+Mocking the clock is a common practice in unit testing to ensure predictable and reliable tests, especially for code that interacts with time-related operations. By controlling the behavior of time in tests, we can isolate the code under test and verify its behavior accurately, leading to more robust and maintainable software.
